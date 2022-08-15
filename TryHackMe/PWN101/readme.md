@@ -4,7 +4,7 @@
 
 | Challenge   | status |
 |-------------|--------|
-| PWN101      |   ✔️  |
+| [PWN101](https://github.com/0xNullByte/PWN/tree/master/TryHackMe/PWN101/pwn101)      |   ✔️  |
 | PWN102      |   ❌  |
 | PWN103      |   ❌  |
 | PWN104      |   ❌  |
