@@ -98,10 +98,12 @@ int main(int argc,char **argv)
 
             else 
             {
+                // STEP (1)
                 READ_REQUEST = httpdReadRequest(SERVER_);
                 if (READ_REQUEST < 0) { httpdEndRequest(SERVER_); }
                 else
                 {
+                // STEP (2)
                     httpdProcessRequest(SERVER_);  // <-- VULN HERE
                     httpdEndRequest(SERVER_);
                 }
@@ -116,7 +118,7 @@ int main(int argc,char **argv)
     
 }
 ```
-### httpdReadRequest(httpd *server)
+### STEP (1) : httpdReadRequest(httpd *server)
 
 ```c++
 int httpdReadRequest(httpd *server){
@@ -171,7 +173,7 @@ int httpdReadRequest(httpd *server){
         _httpd_sanitiseUrl((server->request).path); // يعدل على المسار 
 
 ```
-### httpdProcessRequest(httpd *server)
+### STEP (2) : httpdProcessRequest(httpd *server)
 ```c++
 void httpdProcessRequest(httpd *server)
 
