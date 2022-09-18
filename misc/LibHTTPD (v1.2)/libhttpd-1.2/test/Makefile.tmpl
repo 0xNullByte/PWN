@@ -1,0 +1,6 @@
+CFLAGS= -g -I../src
+EXTRA_LIBS= ../src/libhttpd.a
+
+!program test_httpd test_httpd.c
+
+test_httpd: ../src/libhttpd.a
